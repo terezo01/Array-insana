@@ -1,12 +1,14 @@
 const dadosPessoais = {
     'exemplo': {
         nome: 'Exemplo',
-        idade: 1000,
+        idade: 69,
         email: 'exemplo@fiap.com.br'
     },
 };
 
 const pessoas = ['exemplo'];
+
+adicionados = document.getElementById('adicionados');
 
 function capitalizeFirstLetter(string) {
     if (string.length === 0) return string;  // Retorna a string se estiver vazia
@@ -43,6 +45,8 @@ function add() {
     nomeInput.value = '';
     idadeInput.value = '';
     emailInput.value = '';
+
+    adicionados.innerHTML += `<br>Pessoa adicionada: ${capitalizeFirstLetter(nomeP)}`
 }
 
 function search() {
